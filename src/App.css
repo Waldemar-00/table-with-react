@@ -58,3 +58,6 @@
 .table tbody td:nth-child(odd) {
   border-right: 1px solid #F0D043
 }
+.stocked {
+  color: #E5594F;
+}

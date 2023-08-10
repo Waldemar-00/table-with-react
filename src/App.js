@@ -1,8 +1,26 @@
 import logo from './table-of-contents-svgrepo-com.svg'
 import './App.css'
-// import {data} from './data'
+import {data} from './data'
 
 function App() {
+  const fruit = data.map(obj => {
+    if (obj.category === 'Fruits') {
+      return <tr style={{ color: obj.stocked ? null : '#E5594F' }}>
+              <td>{obj.name}</td>
+              <td>{obj.price}</td>
+            </tr>
+    }
+    return null
+  })
+  const vegetables = data.map(obj => {
+    if (obj.category === 'Vegetables') {
+      return <tr className={obj.stocked ? null : 'stocked'}>
+              <td>{obj.name}</td>
+              <td>{obj.price}</td>
+            </tr>
+    }
+    return null
+  })
   return (
     <div className="App">
       <header className="App-header">
@@ -21,33 +39,11 @@ function App() {
             <tr>
               <th colspan='2'>Fruit</th>
             </tr>
-            <tr>
-              <td>Apple</td>
-              <td>1$</td>
-            </tr>
-            <tr>
-              <td>Dragonfriut</td>
-              <td>1$</td>
-            </tr>
-            <tr>
-              <td>Passionfruit</td>
-              <td>2$</td>
-            </tr>
+              {fruit}
             <tr>
               <th colspan='2'>Vegetables</th>
             </tr>
-            <tr>
-              <td>Spinach</td>
-              <td>2$</td>
-            </tr>
-            <tr>
-              <td>Pumpkin</td>
-              <td>4$</td>
-            </tr>
-            <tr>
-              <td>Peas</td>
-              <td>2$</td>
-            </tr>
+              {vegetables}
           </tbody>
         </table>
       </main>
