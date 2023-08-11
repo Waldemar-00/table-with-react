@@ -1,14 +1,12 @@
-import logo from './table-of-contents-svgrepo-com.svg'
+// import logo from './table-of-contents-svgrepo-com.svg'
 import './App.css'
+import Header from './store/Header'
 import Seach from './store/Seach'
 import {fruit, vegetables} from './store/prodacts'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div className='logo'><img src={logo} className="App-logo" alt="logo" /></div>
-        <h1>Table with JSON data</h1>
-      </header>
+      <Header/>
       <Seach/>
       <main className='Store'>
         <table className='table'>
