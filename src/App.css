@@ -71,12 +71,14 @@
   content: "";
   width: 20px;
   height: 20px;
-  transform: scale(0);
+  transform: scale(0, 0);
+  transition: 200ms transform ease;
   background-color: #C45FA0;
   border-radius: 4px;
 }
 #check:checked::before {
-  transform: scale(1);
+  transform: scale(1, 1);
+
 }
 .labelCheck {
   margin-left: 15px;
