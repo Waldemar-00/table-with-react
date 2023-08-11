@@ -1,4 +1,4 @@
-import logo from '../table-of-contents-svgrepo-com.svg'
+import logo from '../../table-of-contents-svgrepo-com.svg'
 export default function Header() {
   return (
     <header className="App-header">

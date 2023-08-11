@@ -1,33 +1,21 @@
-// import logo from './table-of-contents-svgrepo-com.svg'
 import './App.css'
-import Header from './store/Header'
-import Seach from './store/Seach'
-import {fruit, vegetables} from './store/prodacts'
+import Header from './store/components/Header'
+import Seach from './store/components/Seach'
+import Table from './store/components/Table'
+import {useState} from 'react'
 function App() {
+  const [filter, setFilter] = useState('')
+  const [check, setChek] = useState(false)
   return (
     <div className="App">
       <Header/>
-      <Seach/>
-      <main className='Store'>
-        <table className='table'>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th colspan='2'>Fruit</th>
-            </tr>
-              {fruit}
-            <tr>
-              <th colspan='2'>Vegetables</th>
-            </tr>
-              {vegetables}
-          </tbody>
-        </table>
-      </main>
+      <Seach
+        filter={filter}
+        check={check}
+        setFilter={setFilter}
+        setChek={setChek}
+      />
+      <Table filter={filter} check={check} />
     </div>
   ) 
 }
