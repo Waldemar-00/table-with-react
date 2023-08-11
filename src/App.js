@@ -1,5 +1,6 @@
 import logo from './table-of-contents-svgrepo-com.svg'
 import './App.css'
+import Seach from './store/Seach'
 import {fruit, vegetables} from './store/prodacts'
 function App() {
   return (
@@ -8,13 +9,7 @@ function App() {
         <div className='logo'><img src={logo} className="App-logo" alt="logo" /></div>
         <h1>Table with JSON data</h1>
       </header>
-      <section className='FindOut'>
-        <input type="text" name='seach' placeholder='Seach...' className='seach' />
-        <input type="checkbox" name='check' id='check' />
-        <label htmlFor="check" className='labelCheck'>
-          Only stock products
-        </label>
-      </section>
+      <Seach/>
       <main className='Store'>
         <table className='table'>
           <thead>
