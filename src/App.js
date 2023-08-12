@@ -5,7 +5,7 @@ import Table from './store/components/Table'
 import {useState} from 'react'
 function App() {
   const [filter, setFilter] = useState('')
-  const [check, setChek] = useState(false)
+  const [check, setCheck] = useState(false)
   return (
     <div className="App">
       <Header/>
@@ -13,7 +13,7 @@ function App() {
         filter={filter}
         check={check}
         setFilter={setFilter}
-        setChek={setChek}
+        setCheck={setCheck}
       />
       <Table filter={filter} check={check} />
     </div>

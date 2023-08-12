@@ -11,11 +11,11 @@ export default function Table() {
         </thead>
         <tbody>
           <tr>
-            <th colspan='2'>Fruit</th>
+            <th colSpan='2'>Fruit</th>
           </tr>
           {fruit}
           <tr>
-            <th colspan='2'>Vegetables</th>
+            <th colSpan='2'>Vegetables</th>
           </tr>
           {vegetables}
         </tbody>
