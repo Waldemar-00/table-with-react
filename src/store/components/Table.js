@@ -9,7 +9,7 @@ export default function Table({ filter, check }) {
   })
   const filteredData = checkData.filter(obj => {
     if (filter) {
-      return obj.name.toLowerCase() === filter.toLowerCase() ? obj : null
+      return obj.name.toLowerCase().indexOf(filter.toLowerCase()) !== -1  ? obj : null
     }
     return obj
   })
